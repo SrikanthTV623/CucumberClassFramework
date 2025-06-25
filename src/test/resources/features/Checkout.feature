@@ -1,6 +1,6 @@
 Feature: Verify Checkout Functionality
 
-  @WIP
+  @WIP @smoke
   Scenario: Verify user can see correct prices on checkout page
     Given user opens the website
     Then verify user is on login page
