@@ -2,6 +2,7 @@ package com.automation.steps;
 
 import com.automation.pages.LoginPage;
 import com.automation.utils.ConfigReader;
+import com.automation.utils.TestContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -29,5 +30,10 @@ public class LoginSteps {
     @Then("verify locked out user error message is displayed as below")
     public void verifyLockedOutUserErrorMessageIsDisplayedAsBelow(String errMsg) {
         Assert.assertTrue(loginPage.getInvalidLoginErrMsg().contains(errMsg));
+    }
+
+    @When("user enters login credentials")
+    public void userEntersLoginCredentials() {
+        loginPage.doLogin();
     }
 }

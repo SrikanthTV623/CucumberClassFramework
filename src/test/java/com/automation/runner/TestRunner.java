@@ -9,8 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com.automation.steps",
-        tags = "@WIP",
-        dryRun = true
+        plugin = {"pretty"}
 )
 public class TestRunner {
 
